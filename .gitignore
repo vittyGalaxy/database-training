@@ -1,0 +1,51 @@
+# =========================
+# Database / Docker volumes
+# =========================
+mysql_data/
+mysql-data/
+db_data/
+db-data/
+data/
+.docker/mysql/data/
+
+# =========================
+# Backup / dump
+# =========================
+*.sql.gz
+*.dump
+*.dmp
+*.bak
+
+# !migrations/*.sql
+# !db/migrations/*.sql
+# !seed/*.sql
+# !docker-entrypoint-initdb.d/*.sql
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+
+# =========================
+# Secrets / env
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Client DB / IDE
+# =========================
+# DBeaver
+.dbeaver/
+# JetBrains / VSCode
+.idea/
+.vscode/
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db

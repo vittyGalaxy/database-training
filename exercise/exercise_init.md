@@ -6,18 +6,18 @@ Per la tabella: film( idfilm, titolo, annoproduzione, costo , trama, nomeregista
 
 Scrivere le query in linguaggio SQL necessarie a:
 
-- visualizzare l'elenco dei film
-- visualizzare l'elenco dei film del 1998
-- visualizzare l'elenco dei film prodotti dopo il 2007 ordinati per costo
-- visualizzare l'elenco dei film prodotti dal 2000 in poi ma fino al 2010 escluso
-- visualizzare tutti i film tranne quelli prodotti tra il 2000 e il 2005
-- visualizzare l'elenco dei film prodotti dopo il 2007 costati meno di 10000 euro
-- visualizzare l'elenco dei film del regista 'Gabriele Muccino'
-- visualizzare l'elenco di tutti i film italiani di registi che si chiamano Alessandro
-- visualizzare l'elenco di tutti i film italiani e francesi
-- visualizzare l'elenco di tutti i film del 2007 ordinati per nazione in maniera decrescente
-- Il film Lassú qualcuno è impazzito è stato sovvenzionato per il 25% dallo stato; visualizzare il costo iniziale, la cifra sovvenzionata e il prezzo pagato dai produttori per questo film.
-- Il film Lassù qualcuno mi ama è costato il triplo del film L'onorata società visualizzare i due  costi
+1. visualizzare l'elenco dei film
+2. visualizzare l'elenco dei film del 1998
+3. visualizzare l'elenco dei film prodotti dopo il 2007 ordinati per costo
+4. visualizzare l'elenco dei film prodotti dal 2000 in poi ma fino al 2010 escluso
+5. visualizzare tutti i film tranne quelli prodotti tra il 2000 e il 2005
+6. visualizzare l'elenco dei film prodotti dopo il 2007 costati meno di 10000 euro
+7. visualizzare l'elenco dei film del regista 'Gabriele Muccino'
+8. visualizzare l'elenco di tutti i film italiani di registi che si chiamano Alessandro
+9. visualizzare l'elenco di tutti i film italiani e francesi
+10. visualizzare l'elenco di tutti i film del 2007 ordinati per nazione in maniera decrescente
+11. Il film Lassú qualcuno è impazzito è stato sovvenzionato per il 25% dallo stato; visualizzare il costo iniziale, la cifra sovvenzionata e il prezzo pagato dai produttori per questo film.
+12. Il film Lassù qualcuno mi ama è costato il triplo del film L'onorata società visualizzare i due  costi
 
 ## Exercise 2
 

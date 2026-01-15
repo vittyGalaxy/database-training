@@ -24,3 +24,4 @@ ORDER BY stipendio DESC;
 SELECT *
 FROM dipendenti
 WHERE comunenascita IN ('Roma', 'Bari', 'Napoli');
+

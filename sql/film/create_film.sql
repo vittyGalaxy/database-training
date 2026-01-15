@@ -1,3 +1,4 @@
+-- Active: 1768517081752@@127.0.0.1@3306@esercizi
 DROP TABLE IF EXISTS film;
 
 CREATE TABLE film (

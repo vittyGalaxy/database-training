@@ -1,3 +1,4 @@
+-- Active: 1768521664416@@127.0.0.1@3306@esercizi
 DROP TABLE IF EXISTS dipendenti;
 
 CREATE TABLE dipendenti (

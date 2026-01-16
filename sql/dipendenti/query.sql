@@ -5,7 +5,7 @@ FROM dipendenti;
 -- 2) Dipendenti nati a Roma e quelli nati a Torino
 SELECT *
 FROM dipendenti
-WHERE comunenascita IN ('Roma', 'Torino');
+WHERE comunenascita = "Roma" OR comunenascita = "Torino"
 
 -- 3) Dipendenti che hanno dai 4 ai 7 figli in ordine alfabetico
 SELECT *

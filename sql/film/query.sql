@@ -1,3 +1,4 @@
+-- Active: 1768521664416@@127.0.0.1@3306@esercizi
 -- 1) Visualizzare l'elenco dei film
 SELECT *
 FROM film;
@@ -22,7 +23,7 @@ WHERE annoproduzione >= 2000
 -- 5) Tutti i film tranne quelli prodotti tra il 2000 e il 2005
 SELECT *
 FROM film
-WHERE annoproduzione NOT BETWEEN 2000 AND 2005;
+WHERE annoproduzione < 2000 OR annoproduzione > 2005
 
 -- 6) Film prodotti dopo il 2007 costati meno di 10000 euro
 SELECT *
@@ -45,7 +46,7 @@ WHERE nazione = 'Italia'
 -- 9) Tutti i film italiani e francesi
 SELECT *
 FROM film
-WHERE nazione IN ('Italia', 'Francia');
+WHERE nazione = "Italia" OR nazione = "Francia"
 
 -- 10) Tutti i film del 2007 ordinati per nazione in maniera decrescente
 SELECT *

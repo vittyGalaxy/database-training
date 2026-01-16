@@ -1,3 +1,4 @@
+-- Active: 1768521664416@@127.0.0.1@3306@esercizi
 INSERT INTO dipendenti (nome, cogn, stipendio, numfigli, hobby, comunenascita) VALUES
 ('Mario',   'Rossi',   1200.00, 2,  'golf, musica classica',              'Roma'),
 ('Giulia',  'Bianchi',  980.00, 0,  'pallacanestro, cinema',              'Torino'),

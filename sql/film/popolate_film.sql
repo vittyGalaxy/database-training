@@ -1,3 +1,4 @@
+-- Active: 1768521664416@@127.0.0.1@3306@esercizi
 INSERT INTO film (titolo, annoproduzione, costo, trama, nomeregista, cognomeregista, nazione) VALUES
 ("Lassù qualcuno è impazzito", 2008, 12000.00, "Commedia degli equivoci.", "Gabriele", "Muccino", "Italia"),
 ("Lassù qualcuno mi ama",      2007, 30000.00, "Dramma romantico.",        "Alessandro", "Rossi", "Italia"),

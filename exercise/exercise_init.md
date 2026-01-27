@@ -43,4 +43,40 @@ Svolgere le seguenti query con una tabella
 15. trovare il dipendente in cui ho inserito per errore la parola pallacanestro tra gli hobby in cui ho probabilmente sbagliato l'ultima lettera
 16. visualizzare i dipendenti che hanno al massimo 500 euro di stipendio e almeno 4 figli con lo stipendio aumentato di 350 euro (bonus famiglia), visualizzando anche lo stipendio iniziale
 
+## Exercise 3
 
+Data la seguente tabella
+viaggiinnave(idviaggio, nome, descrizione, datapartenza, dataarrivo, costo, portopartenza, portoarrivo, numpasseggeriMAX, numpasseggerireali, nomepasseggero, cogonemepasseggero, datanascita)
+per costo si intende il costo per persona
+
+Svolgere le seguenti query con una tabella
+1. visualizzare tutti i viaggi
+2. quanti viaggi hanno più di 500 passeggeri
+3. quali viaggi arrivano a Civitavecchia
+4.quali viaggio comprendono una sosta a Barcellona
+5. quali viaggio comprendono una sosta a Barcellona e una a Marsiglia)
+6. quali viaggi sono previsti nel Mar Atlantico
+7. quanti porti sono coinvolti in partenza, e quanti in arrivo
+8. Trovare  tutti quelli il cui nome inizi per D del viaggio "Crociera in Mediterraneo"
+9. Il costo per i bambini sotto 10 anni equivale al 45% del totale calcolarlo
+10. Quanti sono  i bambini sotto 10 anni che pagano meno e quanto pagano in totale (cioè quanto guadagna la compagnia) 
+11. Come la 10 ma solo per il viaggio "Crociera Divertente"
+
+## Exercise 4
+
+animali(idanimale, nome, specie, razza, habitat, anniInzoo, zona, prezzozona)
+per habitat si intende ad esempio: tropicale, oceano, innevato, deserto ecc., per anniInzoo si intende da quanti  anni è dentro lo zoo, colori, per zona si intende ad esemnpio: acquario, parco vegetale, parchetto domestici, dune, ecc.; per colori sii ntende un elenco di colori, per prezzo zona si intende il prezzo che serve per visitare la zona dove sta ogni animale
+
+1. visualizzare l'elenco degli animali
+2. visualizzare gli animali dell'habitat: deserto
+3. visualizzare gli animali dell'habitat: deserto e dell'habitat tropicale
+4. visualizzare gli animali che sono nello zoo da più di 10 anni
+5. visualizzare gli animali che sono nello zoo da più di 10 anni ma da meno di 15
+6. visualizzare tutti gli animali con colore bianco
+7. visualizzare tutti gli animali con colore bianco e verde
+8. visualizzare tutti gli animali con colore bianco e verde ma che non siano viola
+9. visulaizzare tutti gli animali il cui nome inizia per R e contiene la stringa "dol" 
+10. Quanti sono gli armadilli
+11. Media degli anni in zoo 
+12. Prezzo totale delle zone (nella tabella non ormalizzata abbiamo un problema: individuarlo e cercare una soluzione anche online)
+13. Prezzi Massimo e Minimo delle zone

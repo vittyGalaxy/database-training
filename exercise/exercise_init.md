@@ -53,7 +53,7 @@ Svolgere le seguenti query con una tabella
 1. visualizzare tutti i viaggi
 2. quanti viaggi hanno più di 500 passeggeri
 3. quali viaggi arrivano a Civitavecchia
-4.quali viaggio comprendono una sosta a Barcellona
+4. quali viaggio comprendono una sosta a Barcellona
 5. quali viaggio comprendono una sosta a Barcellona e una a Marsiglia)
 6. quali viaggi sono previsti nel Mar Atlantico
 7. quanti porti sono coinvolti in partenza, e quanti in arrivo

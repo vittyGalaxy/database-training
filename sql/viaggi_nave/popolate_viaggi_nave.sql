@@ -1,60 +1,49 @@
+-- Active: 1768521664416@@127.0.0.1@3306@esercizi
 INSERT INTO viaggiinnave
 (idviaggio, nome, descrizione, datapartenza, dataarrivo, costo,
  portopartenza, portoarrivo, numpasseggeriMAX, numpasseggerireali,
  nomepasseggero, cogonemepasseggero, datanascita)
 VALUES
--- Viaggio 1 (arrivo Civitavecchia + soste Barcellona e Marsiglia)
 (1, 'Crociera in Mediterraneo',
  'Itinerario: Genova -> Barcellona (sosta) -> Marsiglia (sosta) -> Civitavecchia. Mare: Mar Mediterraneo.',
  '2026-06-01', '2026-06-10', 1200.00,
  'Genova', 'Civitavecchia', 1000, 800,
  'Dario', 'Rossi', '1988-02-10'),
-
 (1, 'Crociera in Mediterraneo',
  'Itinerario: Genova -> Barcellona (sosta) -> Marsiglia (sosta) -> Civitavecchia. Mare: Mar Mediterraneo.',
  '2026-06-01', '2026-06-10', 1200.00,
  'Genova', 'Civitavecchia', 1000, 800,
  'Daniela', 'Bianchi', '1992-11-03'),
-
 (1, 'Crociera in Mediterraneo',
  'Itinerario: Genova -> Barcellona (sosta) -> Marsiglia (sosta) -> Civitavecchia. Mare: Mar Mediterraneo.',
  '2026-06-01', '2026-06-10', 1200.00,
  'Genova', 'Civitavecchia', 1000, 800,
  'Diego', 'Neri', '2018-09-10'),
-
--- Viaggio 2 (Crociera Divertente + sosta Barcellona)
 (2, 'Crociera Divertente',
  'Itinerario: Napoli -> Barcellona (sosta) -> Palermo. Mare: Mar Mediterraneo.',
  '2026-07-05', '2026-07-12', 900.00,
  'Napoli', 'Palermo', 700, 520,
  'Luca', 'Verdi', '1985-06-21'),
-
 (2, 'Crociera Divertente',
  'Itinerario: Napoli -> Barcellona (sosta) -> Palermo. Mare: Mar Mediterraneo.',
  '2026-07-05', '2026-07-12', 900.00,
  'Napoli', 'Palermo', 700, 520,
  'Sara', 'Gallo', '2017-04-18'),
-
 (2, 'Crociera Divertente',
  'Itinerario: Napoli -> Barcellona (sosta) -> Palermo. Mare: Mar Mediterraneo.',
  '2026-07-05', '2026-07-12', 900.00,
  'Napoli', 'Palermo', 700, 520,
  'Davide', 'Conti', '2019-12-01'),
-
--- Viaggio 3 (Mar Atlantico)
 (3, 'Viaggio Atlantico',
  'Rotta: Lisbona -> Madeira (sosta) -> Azzorre (sosta) -> Rio de Janeiro. Mare: Mar Atlantico.',
  '2026-08-01', '2026-08-15', 1800.00,
  'Lisbona', 'Rio de Janeiro', 900, 650,
  'Marta', 'Silva', '1990-01-30'),
-
 (3, 'Viaggio Atlantico',
  'Rotta: Lisbona -> Madeira (sosta) -> Azzorre (sosta) -> Rio de Janeiro. Mare: Mar Atlantico.',
  '2026-08-01', '2026-08-15', 1800.00,
  'Lisbona', 'Rio de Janeiro', 900, 650,
  'Paolo', 'Costa', '2016-10-05'),
-
--- Viaggio 4 (altro mare, niente Atlantico)
 (4, 'Crociera Nordica',
  'Itinerario: Amburgo -> Copenaghen (sosta) -> Oslo. Mare: Mare del Nord.',
  '2026-12-01', '2026-12-10', 1500.00,

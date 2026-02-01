@@ -29,7 +29,7 @@ select *
 from viaggiinnave
 where descrizione = "%Mar Atlantico%"
 
--- quanti porti sono coinvolti in partenza, e quanti in arrivo
--- select *
--- from viaggiinnave
--- where 
+-- 7. quanti porti sono coinvolti in partenza, e quanti in arrivo
+select COUNT(DISTINCT portopartenza) as num_partenze,
+       COUNT(DISTINCT portoarrivo) as num_arrivi
+from viaggiinnave

@@ -33,15 +33,13 @@ where colore = "bianco"
 -- 7. Tutti gli animali con colore bianco e verde
 select idanimale, nome, specie, colore
 from animali
-where colore = "bianco" AND
-      colore = "verde"
+where colore LIKE "%bianco%verde%"
 
 -- 8. Bianco e verde ma non viola
 select idanimale, nome, specie, colore
 from animali
-where colore = "bianco" AND
-      colore = "verde" AND
-      colore != "viola"
+where colore LIKE "%bianco%verde%" AND
+      colore NOT LIKE "%viola%"
 
 -- 9. Animali il cui nome inizia per R e contiene la stringa "dol"
 select idanimale, nome, specie
@@ -51,6 +49,7 @@ where nome LIKE "R%dol%"
 -- 10. Quanti sono gli armadilli
 select count(specie) as num_armadilli
 from animali
+where specie = "armadillo"
 
 -- 11. Media degli anni in zoo
 select AVG(anniInzoo) as media_anni
@@ -58,4 +57,9 @@ from animali
 
 -- 12. Prezzo totale delle zone (problema e soluzioni)
 select SUM(prezzozona) as prezzo_totale
+from animali
+
+-- 13. Prezzi Massimo e Minimo delle zone
+select MAX(prezzozona) as prezzo_max,
+       MIN(prezzozona) as prezzo_min
 from animali

@@ -33,3 +33,17 @@ where descrizione = "%Mar Atlantico%"
 select COUNT(DISTINCT portopartenza) as num_partenze,
        COUNT(DISTINCT portoarrivo) as num_arrivi
 from viaggiinnave
+
+-- 8. Trovare  tutti quelli il cui nome inizi per D del viaggio "Crociera in Mediterraneo"
+select idviaggio, nome, nomepasseggero
+from viaggiinnave
+where nome = "Crociera in Mediterraneo" AND
+      nomepasseggero LIKE "D%"
+
+-- 9. Il costo per i bambini sotto 10 anni equivale al 45% del totale calcolarlo
+select costo * 0.45 as costo_bambino,
+nomepasseggero, datanascita
+from viaggiinnave
+where timestampdiff(YEAR, datanascita, curdate()) < 10
+
+-- 10. Quanti sono  i bambini sotto 10 anni che pagano meno e quanto pagano in totale (cioè quanto guadagna la compagnia)

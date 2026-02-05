@@ -42,8 +42,19 @@ where nome = "Crociera in Mediterraneo" AND
 
 -- 9. Il costo per i bambini sotto 10 anni equivale al 45% del totale calcolarlo
 select costo * 0.45 as costo_bambino,
-nomepasseggero, datanascita
+idviaggio, nome, nomepasseggero, datanascita
 from viaggiinnave
 where timestampdiff(YEAR, datanascita, curdate()) < 10
 
 -- 10. Quanti sono  i bambini sotto 10 anni che pagano meno e quanto pagano in totale (cioè quanto guadagna la compagnia)
+select COUNT(*) as num_bambini,
+SUM(costo * 0.45) as guadagno_compagnia
+from viaggiinnave
+where timestampdiff(YEAR, datanascita, curdate()) < 10
+
+-- Come la 10 ma solo per il viaggio "Crociera Divertente"
+select COUNT(*) as num_bambini,
+SUM(costo * 0.45) as guadagno_compagnia
+from viaggiinnave
+where timestampdiff(YEAR, datanascita, curdate()) < 10 AND
+      nome = "Crociera Divertente"

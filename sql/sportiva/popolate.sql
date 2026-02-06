@@ -1,3 +1,4 @@
+-- Active: 1768517081752@@127.0.0.1@3306@esercizi
 INSERT INTO comuni (idcomune, nomecomune, cap) VALUES
   (1, 'Torino',  '10123'),
   (2, 'Milano',  '20123'),

@@ -80,3 +80,35 @@ per habitat si intende ad esempio: tropicale, oceano, innevato, deserto ecc., pe
 11. Media degli anni in zoo 
 12. Prezzo totale delle zone (nella tabella non ormalizzata abbiamo un problema: individuarlo e cercare una soluzione anche online)
 13. Prezzi Massimo e Minimo delle zone
+
+## Exercise 5
+
+iscritti( idiscritto, nome, cognome, datanascita, idcomunenascita, idcorso)
+comuni(idcomune, nomecomune, cap)
+corsi( idcorso, nomecorso, descrizione, prezzocorso, idistruttore)
+istruttori(idistruttore, nome, cognome, idcomune)
+lezioni(idlezione, descrizione, idistruttore, idcorso, ore)
+
+1. visualizzare l'elenco degli iscritti a ogni corso (mostrare corso e comune di
+nascita)
+2. visualizzare l'elenco degli iscritti al corso di “Yoga” ordinati in ordine alfabetico
+inverso
+3. visualizzare l'elenco degli iscritti al corso di “Scherma” nati a Torino oppure a Milano
+4. visualizzare l'elenco degli iscritti al corso di “Yoga” e quelli del corso di “Step”
+5. dire quanti sono gli iscritti nati fuori dal comune di Torino
+6. visualizzare l'elenco degli iscritti ai corsi di danza (classica, del ventre o altro)
+7. visualizzare tutti i corsi che costano minimo 50 euro ma meno di 200 euro
+8. visualizzare tutte le lezioni del corso di Scherma
+9. visualizzare gli iscritti ai corsi dell’istruttore “Mario Rossi” di Roma
+10. visualizzare i corsi che nella descrizione hanno la parola “del”
+11. visualizzare l'elenco degli iscritti in cui il cap del comune di nascita inizia con
+12 e finisce con 3
+12. visualizzare il numero di iscritti per ogni corso
+13. visualizzare il numero di lezioni per istruttore
+14. visualizzare gli istruttori che hanno effettuato almeno 120 lezioni
+15. dire qual è il numero di iscritti al corso di “Latino americano"
+16. visualizzare quante ore e quante lezioni sono state svolte per ogni corso
+17. visualizzare gli istruttori che hanno fatto più di 17 corsi
+18. visualizzare le lezioni nella cui descrizione ci sono le parole “roboante” e “leggiadro” in qualsiasi ordine
+19. quanto pagherò per il corso di “Scherma” se viene applicato lo sconto di una certa percentuale e la quota associativa di 20 euro
+20. quanto guadagna l'associazione per il corso “Step primo livello 13”

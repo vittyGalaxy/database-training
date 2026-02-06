@@ -65,19 +65,31 @@ INSERT INTO lezioni (idlezione, descrizione, idistruttore, idcorso, ore) VALUES
 
 /* 120 lezioni per Yoga (serve per punto N: istruttori con >=120 lezioni)
    MySQL 8+: inserimento massivo con CTE ricorsiva */
-WITH RECURSIVE seq AS (
-  SELECT 1 AS n
-  UNION ALL
-  SELECT n + 1 FROM seq WHERE n < 120
-)
-INSERT INTO lezioni (idlezione, descrizione, idistruttore, idcorso, ore)
-SELECT
-  1000 + n AS idlezione,
-  CONCAT('Yoga sessione #', n, ' - mobilità e respiro') AS descrizione,
-  1 AS idistruttore,
-  1 AS idcorso,
-  1.00 AS ore
-FROM seq;
+SET SESSION cte_max_recursion_depth = 100000;
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS ins_lezioni_yoga $$
+CREATE PROCEDURE ins_lezioni_yoga()
+BEGIN
+  DECLARE i INT DEFAULT 1;
+
+  WHILE i <= 120 DO
+    INSERT INTO lezioni (idlezione, descrizione, idistruttore, idcorso, ore)
+    VALUES (
+      1000 + i,
+      CONCAT('Yoga sessione #', i, ' - mobilità e respiro'),
+      1,
+      1,
+      1.00
+    );
+    SET i = i + 1;
+  END WHILE;
+END $$
+
+DELIMITER ;
+
+CALL ins_lezioni_yoga();
 
 /* Alcune lezioni per Step primo livello 13 (per punto T: guadagno su quel corso) */
 INSERT INTO lezioni (idlezione, descrizione, idistruttore, idcorso, ore) VALUES

@@ -89,10 +89,8 @@ corsi( idcorso, nomecorso, descrizione, prezzocorso, idistruttore)
 istruttori(idistruttore, nome, cognome, idcomune)
 lezioni(idlezione, descrizione, idistruttore, idcorso, ore)
 
-1. visualizzare l'elenco degli iscritti a ogni corso (mostrare corso e comune di
-nascita)
-2. visualizzare l'elenco degli iscritti al corso di “Yoga” ordinati in ordine alfabetico
-inverso
+1. visualizzare l'elenco degli iscritti a ogni corso (mostrare corso e comune di nascita)
+2. visualizzare l'elenco degli iscritti al corso di “Yoga” ordinati in ordine alfabetico inverso
 3. visualizzare l'elenco degli iscritti al corso di “Scherma” nati a Torino oppure a Milano
 4. visualizzare l'elenco degli iscritti al corso di “Yoga” e quelli del corso di “Step”
 5. dire quanti sono gli iscritti nati fuori dal comune di Torino
@@ -101,8 +99,7 @@ inverso
 8. visualizzare tutte le lezioni del corso di Scherma
 9. visualizzare gli iscritti ai corsi dell’istruttore “Mario Rossi” di Roma
 10. visualizzare i corsi che nella descrizione hanno la parola “del”
-11. visualizzare l'elenco degli iscritti in cui il cap del comune di nascita inizia con
-12 e finisce con 3
+11. visualizzare l'elenco degli iscritti in cui il cap del comune di nascita inizia con 12 e finisce con 3
 12. visualizzare il numero di iscritti per ogni corso
 13. visualizzare il numero di lezioni per istruttore
 14. visualizzare gli istruttori che hanno effettuato almeno 120 lezioni

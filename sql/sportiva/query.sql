@@ -14,4 +14,12 @@ select DISTINCT iscritti.nome, iscritti.idiscritto, lezioni.descrizione
 from iscritti, lezioni
 where   iscritti.idcorso = lezioni.idcorso AND
         lezioni.descrizione LIKE "Yoga%"
--- ORDER BY iscritti.nome DESC;
+ORDER BY iscritti.nome DESC;
+
+-- 3. visualizzare l'elenco degli iscritti al corso di “Scherma” nati a Torino oppure a Milano
+select iscritti.idiscritto, iscritti.nome, iscritti.cognome, comuni.nomecomune, corsi.nomecorso
+from iscritti, comuni, corsi
+where   iscritti.idcomunenascita = comuni.idcomune AND
+        iscritti.idcorso = corsi.idcorso AND
+        corsi.nomecorso LIKE "Scherma" AND
+        ((comuni.nomecomune = "Torino") OR (comuni.nomecomune = "Milano"))

@@ -42,3 +42,15 @@ select iscritti.nome, iscritti.cognome, corsi.nomecorso, corsi.descrizione
 from iscritti, corsi
 where   iscritti.idcorso = corsi.idcorso AND
         corsi.nomecorso LIKE "Danza%"
+
+-- 7. visualizzare tutti i corsi che costano minimo 50 euro ma meno di 200 euro
+select corsi.nomecorso, corsi.descrizione, corsi.prezzocorso
+from corsi
+where   corsi.prezzocorso >= 50 AND
+        corsi.prezzocorso < 200
+
+-- 8. visualizzare tutte le lezioni del corso di Scherma
+select corsi.nomecorso, lezioni.descrizione, lezioni.ore
+from lezioni, corsi
+where   lezioni.idlezione = corsi.idcorso AND
+        corsi.nomecorso = "Scherma"

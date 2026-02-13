@@ -54,3 +54,27 @@ select corsi.nomecorso, lezioni.descrizione, lezioni.ore
 from lezioni, corsi
 where   lezioni.idlezione = corsi.idcorso AND
         corsi.nomecorso = "Scherma"
+
+-- 9. visualizzare gli iscritti ai corsi dell’istruttore “Mario Rossi” di Roma
+select iscritti.nome, iscritti.cognome, iscritti.datanascita
+from iscritti, corsi, istruttori
+where   iscritti.idcorso = corsi.idcorso and corsi.idistruttore = istruttori.idistruttore
+        and istruttori.nome = 'Mario' and istruttori.cognome = 'Rossi'
+
+
+-- 10. visualizzare i corsi che nella descrizione hanno la parola “del”
+select corsi.nomecorso, corsi.descrizione, corsi.prezzocorso
+from corsi
+where corsi.descrizione LIKE "%del%"
+
+-- 11. visualizzare l'elenco degli iscritti in cui il cap del comune di nascita inizia con 12 e finisce con 3
+SELECT iscritti.nome, iscritti.cognome, iscritti.datanascita
+FROM iscritti, comuni
+WHERE   iscritti.idcomunenascita = comuni.idcomune
+        AND comuni.cap LIKE '12%3';
+
+-- 12. visualizzare il numero di iscritti per ogni corso
+select corsi.idcorso, count(iscritti.idiscritto)
+from iscritti, corsi
+where iscritti.idcorso = corsi.idcorso
+GROUP BY corsi.idcorso

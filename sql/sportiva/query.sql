@@ -78,3 +78,28 @@ select corsi.idcorso, count(iscritti.idiscritto)
 from iscritti, corsi
 where iscritti.idcorso = corsi.idcorso
 GROUP BY corsi.idcorso
+
+-- 13. visualizzare il numero di lezioni per istruttore
+select istruttori.idistruttore, count(lezioni.idlezione)
+from lezioni, istruttori
+where istruttori.idistruttore = lezioni.idistruttore
+GROUP BY lezioni.idistruttore
+
+-- 14. visualizzare gli istruttori che hanno effettuato almeno 120 lezioni
+select istruttori.nome, istruttori.cognome, count(lezioni.idlezione) as numero_lezioni
+from istruttori, lezioni
+where istruttori.idistruttore = lezioni.idistruttore
+GROUP BY istruttori.idistruttore, istruttori.nome, istruttori.cognome
+having count(lezioni.idlezione) >= 120;
+
+-- 15. dire qual è il numero di iscritti al corso di “Latino americano"
+select iscritti.nome, iscritti.cognome, corsi.nomecorso
+from iscritti, corsi
+where   corsi.idcorso = iscritti.idcorso AND
+        corsi.nomecorso = "Latino americano"
+
+-- 16. visualizzare quante ore e quante lezioni sono state svolte per ogni corso
+select corsi.idcorso, corsi.nomecorso, count(lezioni.idlezione) as numero_lezioni, sum(lezioni.ore) as ore_totali
+from corsi, lezioni
+where corsi.idcorso = lezioni.idcorso
+GROUP BY corsi.idcorso, corsi.nomecorso;

@@ -110,3 +110,9 @@ from istruttori, corsi
 where istruttori.idistruttore = corsi.idistruttore
 group by istruttori.idistruttore, istruttori.nome, istruttori.cognome
 having num_corsi > 17;
+
+-- 18. visualizzare le lezioni nella cui descrizione ci sono le parole “roboante” e “leggiadro” in qualsiasi ordine
+select lezioni.idlezione, lezioni.descrizione, lezioni.ore
+from lezioni
+where   lezioni.descrizione like "%roboante%" or
+        lezioni.descrizione like "%leggiadro%"

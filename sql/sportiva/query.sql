@@ -116,3 +116,8 @@ select lezioni.idlezione, lezioni.descrizione, lezioni.ore
 from lezioni
 where   lezioni.descrizione like "%roboante%" or
         lezioni.descrizione like "%leggiadro%"
+
+-- 19. quanto pagherò per il corso di “Scherma” se viene applicato lo sconto di una certa percentuale e la quota associativa di 20 euro
+select corsi.idcorso, corsi.nomecorso, corsi.prezzocorso, corsi.prezzocorso - (corsi.prezzocorso * 20 / 100) as sconto
+from corsi
+where corsi.nomecorso = "Scherma"

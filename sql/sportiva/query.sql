@@ -121,3 +121,10 @@ where   lezioni.descrizione like "%roboante%" or
 select corsi.idcorso, corsi.nomecorso, corsi.prezzocorso, corsi.prezzocorso - (corsi.prezzocorso * 20 / 100) as sconto
 from corsi
 where corsi.nomecorso = "Scherma"
+
+-- 20. quanto guadagna l'associazione per il corso “Step primo livello 13”
+select corsi.nomecorso, count(iscritti.idiscritto) * corsi.prezzocorso as guagagno_totale
+from corsi, iscritti
+where   corsi.idcorso = iscritti.idcorso and
+        corsi.nomecorso = "Step primo livello 13"
+group by corsi.nomecorso, corsi.prezzocorso;

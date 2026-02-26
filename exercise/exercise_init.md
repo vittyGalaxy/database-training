@@ -109,3 +109,37 @@ lezioni(idlezione, descrizione, idistruttore, idcorso, ore)
 18. visualizzare le lezioni nella cui descrizione ci sono le parole “roboante” e “leggiadro” in qualsiasi ordine
 19. quanto pagherò per il corso di “Scherma” se viene applicato lo sconto di una certa percentuale e la quota associativa di 20 euro
 20. quanto guadagna l'associazione per il corso “Step primo livello 13”
+
+## Exercise 6
+
+orologi( idorologio, nome, valore, descrizione, idproduttore, idtipo )
+produttori( idproduttore, nomeproduttore, idnazione)
+tipi( idtipo, tipo)
+nazioni(idnazione, nome)
+
+1. visualizzare l'elenco di tutti gli orologi (mostrare tipo e produttore)
+2. visualizzare l'elenco di tutti gli orologi della Breil
+3. visualizzare l'elenco di tutti gli orologi della Breil il cui valore supera i 350 euro
+4. visualizzare l'elenco di tutti gli orologi il cui valore va tra i 200 e i 400 euro
+5. visualizzare l'elenco di tutti gli orologi atomici e automatici
+6. visualizzare gli orologi italiani e francesi
+7. visualizzare l'elenco di tutti gli orologi la cui descrizione contiene la parola “ovale”
+8. visualizzare gli orologi in cui il tipo inizi per la lettera a seguita da uno spazio (es. a pendolo, a cucù)
+9. visualizzare l'elenco di tutti gli orologi il cui produttore abbia come terza lettera esattamente la “s”
+10. visualizzare l'elenco degli orologi che non siano “a cucù”
+11. dire quanti sono tutti gli orologi posseduti
+12. dire quanti sono tutti gli orologi “a pendolo” posseduti
+13. dire quanti orologi sono posseduti per ogni tipo
+14. mostrare i tipi di orologi di cui si posseggono meno di 10 esemplari
+15. visualizzare il costo dell'orologio più costoso
+16. visualizzare gli orologi che hanno valore uguale al più costoso
+17. visualizzare i costi massimo, minimo e medio degli orologi
+18. visualizzare quanto guadagnerebbe il collezionista se vendesse tutti i suoi orologi
+19. visualizzare quanto guadagnerebbe il collezionista se vendesse tutti i suoi orologi atomici
+20. visualizzare il guadagno per ogni tipo
+21. visualizzare quanti orologi si hanno per ogni nazione
+22. sapendo che il collezionista possiede 15 “Swatch Irony neri” dire quanto guadagnerebbe se ne vendesse in blocco 7 (suggerimento: “Swatch Irony nero” è il nome dell'orologio)
+23. visualizzare il numero di orologi per produttore
+24. visualizzare quanto guadagnerebbe il collezionista vendendo tutti gli orologi di un certo produttore
+25. visualizzare il costo di ogni “Breil” aggiungendo per ognuno il costo di spedizione (di euro 17.50)
+26. visualizzare il costo totale della vendita di tutti i Breil compreso di costo di spedizione (di euro 37.80)

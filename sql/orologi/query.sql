@@ -4,3 +4,9 @@ select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, pr
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
+
+-- 2. visualizzare l'elenco di tutti gli orologi della Breil
+select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo
+from orologi
+join tipi on orologi.idtipo = tipi.idtipo
+where orologi.nome like "Breil%"

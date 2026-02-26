@@ -25,3 +25,11 @@ join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 where   orologi.valore >= 200 and
         orologi.valore <= 400
+
+-- 5. visualizzare l'elenco di tutti gli orologi atomici e automatici
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo
+where   orologi.descrizione like "%atomici%" or
+        orologi.descrizione like "%automatici%"

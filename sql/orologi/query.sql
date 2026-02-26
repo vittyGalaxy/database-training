@@ -33,3 +33,12 @@ join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 where   orologi.descrizione like "%atomici%" or
         orologi.descrizione like "%automatici%"
+
+-- 6. visualizzare gli orologi italiani e francesi
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo, nazioni.nome
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo
+join nazioni on produttori.idnazione = nazioni.idnazione
+where   nazioni.nome = "Italia" or
+        nazioni.nome = "Francia"

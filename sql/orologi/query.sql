@@ -42,3 +42,10 @@ join tipi on orologi.idtipo = tipi.idtipo
 join nazioni on produttori.idnazione = nazioni.idnazione
 where   nazioni.nome = "Italia" or
         nazioni.nome = "Francia"
+
+-- 7. visualizzare l'elenco di tutti gli orologi la cui descrizione contiene la parola “ovale”
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo
+where orologi.descrizione like "%ovale%"

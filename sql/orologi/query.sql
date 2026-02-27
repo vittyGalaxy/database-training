@@ -35,7 +35,7 @@ where   tipi.tipo = "atomico" or
         tipi.tipo = "automatico"
 
 -- 6. visualizzare gli orologi italiani e francesi
-select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo, nazioni.nome
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo, nazioni.nome
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
@@ -44,15 +44,22 @@ where   nazioni.nome = "Italia" or
         nazioni.nome = "Francia"
 
 -- 7. visualizzare l'elenco di tutti gli orologi la cui descrizione contiene la parola “ovale”
-select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 where orologi.descrizione like "%ovale%"
 
 -- 8. visualizzare gli orologi in cui il tipo inizi per la lettera a seguita da uno spazio (es. a pendolo, a cucù)
-select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 where tipi.tipo like "a %"
+
+-- 9. visualizzare l'elenco di tutti gli orologi il cui produttore abbia come terza lettera esattamente la “s”
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo
+where produttori.nomeproduttore like "__s%"

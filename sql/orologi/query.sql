@@ -50,3 +50,9 @@ join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 where orologi.descrizione like "%ovale%"
 
+-- 8. visualizzare gli orologi in cui il tipo inizi per la lettera a seguita da uno spazio (es. a pendolo, a cucù)
+select orologi.idorologio, orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, tipi.tipo
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo
+where tipi.tipo like "a %"

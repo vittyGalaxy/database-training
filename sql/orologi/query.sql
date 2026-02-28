@@ -72,8 +72,14 @@ join tipi on orologi.idtipo = tipi.idtipo
 where tipi.tipo != "a cucú"
 
 -- 11. dire quanti sono tutti gli orologi posseduti
-select count(orologi.idorologio)
+select count(orologi.idorologio) as orologi_posseduti
 from orologi
+
+-- 12. dire quanti sono tutti gli orologi “a pendolo” posseduti
+select count(orologi.idorologio) as orologi_pendolo_posseduti
+from orologi
+join tipi on orologi.idtipo = tipi.idtipo
+where tipi.tipo =  "a pendolo"
 
 -- 13. dire quanti orologi sono posseduti per ogni tipo
 select tipi.idtipo, tipi.tipo, count(idorologio)

@@ -87,6 +87,13 @@ from orologi
 join tipi on orologi.idtipo = tipi.idtipo
 group by tipi.idtipo, tipi.tipo
 
+-- 14. mostrare i tipi di orologi di cui si posseggono meno di 10 esemplari
+select tipi.tipo
+from orologi
+join tipi on orologi.idtipo = tipi.idtipo
+group by tipi.tipo
+having count(orologi.idorologio) < 10;
+
 -- 15. visualizzare il costo dell'orologio più costoso
 select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo, max(orologi.valore) as valore_max
 from orologi

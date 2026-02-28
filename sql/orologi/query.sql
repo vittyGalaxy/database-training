@@ -71,8 +71,18 @@ join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 where tipi.tipo != "a cucú"
 
+-- 11. dire quanti sono tutti gli orologi posseduti
+select count(orologi.idorologio)
+from orologi
+
 -- 13. dire quanti orologi sono posseduti per ogni tipo
 select tipi.idtipo, tipi.tipo, count(idorologio)
 from orologi
 join tipi on orologi.idtipo = tipi.idtipo
 group by tipi.idtipo, tipi.tipo
+
+-- 15. visualizzare il costo dell'orologio più costoso
+select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo, max(orologi.valore) as valore_max
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo

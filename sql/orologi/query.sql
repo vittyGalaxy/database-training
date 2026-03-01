@@ -99,3 +99,10 @@ select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, pr
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
+
+-- 16. visualizzare gli orologi che hanno valore uguale al più costoso
+select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo, max(orologi.valore) as max_valore
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join tipi on orologi.idtipo = tipi.idtipo
+order by orologi.valore desc;

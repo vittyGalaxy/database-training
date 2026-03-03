@@ -95,14 +95,17 @@ group by tipi.tipo
 having count(orologi.idorologio) < 10;
 
 -- 15. visualizzare il costo dell'orologio più costoso
-select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo, max(orologi.valore) as valore_max
+select max(orologi.valore) as valore_max
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join tipi on orologi.idtipo = tipi.idtipo
 
 -- 16. visualizzare gli orologi che hanno valore uguale al più costoso
-select orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo, max(orologi.valore) as max_valore
-from orologi
-join produttori on orologi.idproduttore = produttori.idproduttore
-join tipi on orologi.idtipo = tipi.idtipo
-order by orologi.valore desc;
+SELECT orologi.idorologio, orologi.nome, orologi.valore, orologi.descrizione, produttori.nomeproduttore, tipi.tipo
+FROM orologi
+JOIN produttori ON orologi.idproduttore = produttori.idproduttore
+JOIN tipi ON orologi.idtipo = tipi.idtipo
+WHERE orologi.valore = (
+        SELECT MAX(valore)
+        FROM orologi
+);

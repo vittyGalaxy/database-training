@@ -117,3 +117,9 @@ from orologi;
 -- 18. visualizzare quanto guadagnerebbe il collezionista se vendesse tutti i suoi orologi
 select sum(orologi.valore) as guadagno_totale
 from orologi
+
+-- 19. visualizzare quanto guadagnerebbe il collezionista se vendesse tutti i suoi orologi atomici
+select sum(orologi.valore) as guadagno_atomici
+from orologi
+join tipi on orologi.idtipo = tipi.idtipo
+where tipi.tipo = "atomico"

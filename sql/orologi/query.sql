@@ -111,7 +111,7 @@ WHERE orologi.valore = (
 );
 
 -- 17. visualizzare i costi massimo, minimo e medio degli orologi
-select MAX(costo) AS costo_massimo, MIN(costo) AS costo_minimo,AVG(costo) AS costo_medio
+select MAX(orologi.valore) AS costo_massimo, MIN(orologi.valore) AS costo_minimo,AVG(orologi.valore) AS costo_medio
 from orologi;
 
 -- 18. visualizzare quanto guadagnerebbe il collezionista se vendesse tutti i suoi orologi

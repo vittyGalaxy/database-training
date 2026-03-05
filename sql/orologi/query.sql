@@ -129,3 +129,10 @@ select tipi.tipo ,sum(orologi.valore) as valori_tipo
 from orologi
 join tipi ON orologi.idtipo = tipi.idtipo
 group by tipi.idtipo
+
+-- 21. visualizzare quanti orologi si hanno per ogni nazione
+select count(orologi.idorologio), nazioni.nome
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+join nazioni on produttori.idnazione = nazioni.idnazione
+group by nazioni.idnazione

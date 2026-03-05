@@ -123,3 +123,9 @@ select sum(orologi.valore) as guadagno_atomici
 from orologi
 join tipi on orologi.idtipo = tipi.idtipo
 where tipi.tipo = "atomico"
+
+-- 20. visualizzare il guadagno per ogni tipo
+select tipi.tipo ,sum(orologi.valore) as valori_tipo
+from orologi
+join tipi ON orologi.idtipo = tipi.idtipo
+group by tipi.idtipo

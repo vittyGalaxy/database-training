@@ -136,3 +136,8 @@ from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 join nazioni on produttori.idnazione = nazioni.idnazione
 group by nazioni.idnazione
+
+-- 22. sapendo che il collezionista possiede 15 “Swatch Irony neri” dire quanto guadagnerebbe se ne vendesse in blocco 7 (suggerimento: “Swatch Irony nero” è il nome dell'orologio)
+select orologi.valore * 7 as guadagno
+from orologi
+where orologi.nome = 'Swatch Irony nero'

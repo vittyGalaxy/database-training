@@ -141,3 +141,9 @@ group by nazioni.idnazione
 select orologi.valore * 7 as guadagno
 from orologi
 where orologi.nome = 'Swatch Irony nero'
+
+-- 23. visualizzare il numero di orologi per produttore
+select produttori.nomeproduttore, count(orologi.idorologio)
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+group by produttori.idproduttore

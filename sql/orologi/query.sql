@@ -147,3 +147,9 @@ select produttori.nomeproduttore, count(orologi.idorologio)
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 group by produttori.idproduttore
+
+-- 24. visualizzare quanto guadagnerebbe il collezionista vendendo tutti gli orologi di un certo produttore
+select produttori.nomeproduttore, sum(orologi.valore)
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+group by produttori.nomeproduttore

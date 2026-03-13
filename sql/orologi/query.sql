@@ -153,3 +153,9 @@ select produttori.nomeproduttore, sum(orologi.valore)
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 group by produttori.nomeproduttore
+
+-- 25. visualizzare il costo di ogni “Breil” aggiungendo per ognuno il costo di spedizione (di euro 17.50)
+select produttori.nomeproduttore, sum(orologi.valore) * 17.50 as costo_totale
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+where produttori.nomeproduttore = "Breil"

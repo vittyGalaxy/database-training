@@ -159,3 +159,9 @@ select produttori.nomeproduttore, sum(orologi.valore) + count(orologi.idorologio
 from orologi
 join produttori on orologi.idproduttore = produttori.idproduttore
 where produttori.nomeproduttore = "Breil"
+
+-- 26. visualizzare il costo totale della vendita di tutti i Breil compreso di costo di spedizione (di euro 37.80)
+select sum(orologi.valore) + 37.80 as totale
+from orologi
+join produttori on orologi.idproduttore = produttori.idproduttore
+where produttori.nomeproduttore = "Breil"

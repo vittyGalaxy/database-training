@@ -143,3 +143,50 @@ nazioni(idnazione, nome)
 24. visualizzare quanto guadagnerebbe il collezionista vendendo tutti gli orologi di un certo produttore
 25. visualizzare il costo di ogni “Breil” aggiungendo per ognuno il costo di spedizione (di euro 17.50)
 26. visualizzare il costo totale della vendita di tutti i Breil compreso di costo di spedizione (di euro 37.80)
+
+## Exercise 7
+Clienti(idcliente,nome, cognome, telefono,email, idnazionalita)
+PrEventi(idprevento, idcliente, dataarrivo, oraprevista, numpartecipanti, prezzofinale, idtipo, idsala)
+Sale(idsala, nome, idtipo, descrizione, mq, nposti, prezzo)
+TipiEventi(idtipo, tipo)
+TipiSale(idtipo, nome, descrizione)
+Nazioni(idnazione, nazione)
+dove
+1. PrEventi contiene l’elenco delle prenotazioni ad eventi di vario tipo, per prezzofinale si intende il prezzo
+realmente applicato alla prenotazione relativo all’affitto della sala prenotata (che è indipendente dal numero
+di partecipanti o dall’evento)
+2. In Sale, per mq si intende l’ampiezza della sala espressa in metri quadrati, per nposti il numero di posti
+massimo possibile, per prezzo il prezzo previsto per l’affitto della sala ad evento
+3. Le sale hanno i nomi dei colori (Esempio: sala Viola, Rossa ecc.)
+4. TipiEventi contiene ad esempio: matrimonio, battesimo, compleanno, congresso, ecc.
+5. TipiSale contiene ad esempio: ristorante, sala convegno, meeting, auditorium ecc.
+Scrivere le query che servono a:
+
+1. Visualizzare tutti le righe e tutti i campi della tabella clienti
+2. Visualizzare le sale mostrando il tipo e la descrizione in ordine alfabetico per nome
+3. Visualizzare le sale convegno e quelle ristorante
+4. Visualizzare le sale ristorante che costano massimo 145 euro ad evento
+5. Visualizzare i clienti a cui ho concesso sale ristorante a un prezzo compreso tra 120 e 150 euro
+6. Visualizzare le prenotazioni mostrando il cliente, la sala e il tipo di evento
+7. Visualizzare tutte le prenotazioni di un dato cliente
+8. Visualizzare le sale con “vista sul mare”
+9. Visualizzare le sale meeting con “veranda” e “vista sul mare”
+10. Visualizzare le sale che sono state prenotate per congressi di almeno 300 partecipanti
+11. Visualizzare i clienti il cui numero di telefono sia esattamente di 9 cifre e le ultime due cifre zero e nove
+12. Visualizzare i clienti che arrivano oggi dalle ore 15 in poi; ordinare dalla Z alla A
+13. Visualizzare quante sale ci sono nel mio “SaRi”
+14. Visualizzare il prezzo medio delle sale ristorante
+15. Visualizzare quanti clienti hanno scelto l’auditorium
+16. Visualizzare quanto guadagnerei al giorno se tutte le sale fossero occupate facendo pagare a prezzo pieno (quello previsto)
+17. Visualizzare quanto guadagno oggi visto che tutte le sale sono realmente occupate
+18. Visualizzare quante sale ho per ogni tipo
+19. Visualizzare quante prenotazioni sono state finora effettuate per ogni tipo di sala
+20. Visualizzare quante prenotazioni sono state finora effettuate per ogni tipo di evento
+21. Visualizzare il prezzo medio per tipo di sala
+22. Visualizzare quanti clienti hanno prenotato per ogni Nazione a esclusione degli Italiani
+23. Visualizzare quanti clienti hanno prenotato per ogni Nazione tranne per quelle nazioni in cui ho avuto meno
+di 100 clienti
+24. Per la sala “Viola” prenotata oggi per la prima volta ho applicato un prezzo di 10 euro in promozione; visualizzare quanto ho perso rispetto al prezzo previsto.
+25. La sala “Magenta” prenotata oggi per la prima volta ho applicato un prezzo in promozione; visualizzare
+quanto ho perso rispetto al prezzo previsto.
+26. Di regolamento, ai clienti che non indicano un ora di arrivo applico una penale di 10 euro sul prezzo finale concordato; visualizzare quante penali ho applicato finora e quanto ho guadagnato in più

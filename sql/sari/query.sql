@@ -3,3 +3,9 @@
 select Clienti.nome, Clienti.cognome, Clienti.telefono, Clienti.email, Clienti.idnazionalita
 from Clienti
 join nazioni on Clienti.idnazionalita = nazioni.idnazione
+
+-- 2. Visualizzare le sale mostrando il tipo e la descrizione in ordine alfabetico per nome
+select TipiSale.nome, TipiSale.descrizione
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+order by TipiSale.nome

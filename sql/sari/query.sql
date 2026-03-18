@@ -21,3 +21,11 @@ select Sale.idsala, Sale.nome, TipiSale.nome, Sale.prezzo
 from Sale
 join TipiSale on Sale.idtipo = TipiSale.idtipo
 where TipiSale.nome = "ristorante" and Sale.prezzo <= 145
+
+-- 5. Visualizzare i clienti a cui ho concesso sale ristorante a un prezzo compreso tra 120 e 150 euro
+select Clienti.idcliente, Clienti.nome, Clienti.cognome, TipiSale.nome, PrEventi.prezzofinale
+from PrEventi
+join Clienti on PrEventi.idcliente = Clienti.idcliente
+join TipiSale on PrEventi.idtipo = TipiSale.idtipo
+where   TipiSale.nome = "ristorante" and 
+        ((PrEventi.prezzofinale >= 120) and PrEventi.prezzofinale <= 150)

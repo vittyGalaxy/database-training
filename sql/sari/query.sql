@@ -15,3 +15,9 @@ select Sale.idsala, Sale.nome, TipiSale.nome
 from Sale
 join TipiSale on Sale.idtipo = TipiSale.idtipo
 where TipiSale.nome = "sala convegno"
+
+-- 4. Visualizzare le sale ristorante che costano massimo 145 euro ad evento
+select Sale.idsala, Sale.nome, TipiSale.nome, Sale.prezzo
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+where TipiSale.nome = "ristorante" and Sale.prezzo <= 145

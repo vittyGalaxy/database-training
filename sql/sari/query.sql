@@ -9,3 +9,9 @@ select TipiSale.nome, TipiSale.descrizione
 from Sale
 join TipiSale on Sale.idtipo = TipiSale.idtipo
 order by TipiSale.nome
+
+-- 3. Visualizzare le sale convegno e quelle ristorante
+select Sale.idsala, Sale.nome, TipiSale.nome
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+where TipiSale.nome = "sala convegno"

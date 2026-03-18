@@ -29,3 +29,10 @@ join Clienti on PrEventi.idcliente = Clienti.idcliente
 join TipiSale on PrEventi.idtipo = TipiSale.idtipo
 where   TipiSale.nome = "ristorante" and 
         ((PrEventi.prezzofinale >= 120) and PrEventi.prezzofinale <= 150)
+
+-- 6. Visualizzare le prenotazioni mostrando il cliente, la sala e il tipo di evento
+select PrEventi.idprevento, Clienti.nome, Clienti.cognome, Sale.nome, TipiEventi.tipo
+from PrEventi
+join Clienti on PrEventi.idcliente = Clienti.idcliente
+join TipiEventi on PrEventi.idtipo = TipiEventi.idtipo
+join Sale on PrEventi.idsala = Sale.idsala

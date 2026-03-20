@@ -56,3 +56,8 @@ select PrEventi.idprevento, PrEventi.numpartecipanti, Sale.nome
 from PrEventi
 join Sale on PrEventi.idsala = Sale.idsala
 where PrEventi.numpartecipanti >= 300
+
+-- 11. Visualizzare i clienti il cui numero di telefono sia esattamente di 9 cifre e le ultime due cifre zero e nove
+select Clienti.nome, Clienti.cognome, Clienti.telefono
+from Clienti
+where Clienti.telefono like "_______09"

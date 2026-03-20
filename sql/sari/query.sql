@@ -78,3 +78,11 @@ from Sale
 join TipiSale on Sale.idtipo = TipiSale.idtipo
 group by TipiSale.nome
 having TipiSale.nome = "ristorante"
+
+-- 15. Visualizzare quanti clienti hanno scelto l’auditorium
+select TipiSale.nome, count(Clienti.idcliente) as clienti_in_auditorium
+from PrEventi
+join TipiSale on PrEventi.idtipo = TipiSale.idtipo
+join Clienti on PrEventi.idcliente = Clienti.idcliente
+group by TipiSale.nome
+having TipiSale.nome = "auditorium"

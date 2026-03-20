@@ -61,3 +61,9 @@ where PrEventi.numpartecipanti >= 300
 select Clienti.nome, Clienti.cognome, Clienti.telefono
 from Clienti
 where Clienti.telefono like "_______09"
+
+-- 12. Visualizzare i clienti che arrivano oggi dalle ore 15 in poi; ordinare dalla Z alla A
+select Clienti.nome, Clienti.cognome, PrEventi.oraprevista
+from PrEventi
+join Clienti on PrEventi.idcliente = Clienti.idcliente
+where PrEventi.oraprevista >= "15:00:00"

@@ -50,3 +50,9 @@ join TipiSale on Sale.idtipo = TipiSale.idtipo
 where   (Sale.descrizione like "%veranda%" or
         Sale.descrizione like "%vista sul mare%") and
         TipiSale.nome = "meeting"
+
+-- 10. Visualizzare le sale che sono state prenotate per congressi di almeno 300 partecipanti
+select PrEventi.idprevento, PrEventi.numpartecipanti, Sale.nome
+from PrEventi
+join Sale on PrEventi.idsala = Sale.idsala
+where PrEventi.numpartecipanti >= 300

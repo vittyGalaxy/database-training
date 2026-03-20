@@ -71,3 +71,10 @@ where PrEventi.oraprevista >= "15:00:00"
 -- 13. Visualizzare quante sale ci sono nel mio “SaRi”
 select count(Sale.idsala) as numero_sale
 from Sale
+
+-- 14. Visualizzare il prezzo medio delle sale ristorante
+select TipiSale.nome, avg(Sale.prezzo) as media_prezzo_sale
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+group by TipiSale.nome
+having TipiSale.nome = "ristorante"

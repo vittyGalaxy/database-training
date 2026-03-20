@@ -67,3 +67,7 @@ select Clienti.nome, Clienti.cognome, PrEventi.oraprevista
 from PrEventi
 join Clienti on PrEventi.idcliente = Clienti.idcliente
 where PrEventi.oraprevista >= "15:00:00"
+
+-- 13. Visualizzare quante sale ci sono nel mio “SaRi”
+select count(Sale.idsala) as numero_sale
+from Sale

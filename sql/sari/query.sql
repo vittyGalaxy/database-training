@@ -42,3 +42,11 @@ select Sale.idsala, Sale.nome, Sale.descrizione, TipiSale.nome
 from Sale
 join TipiSale on Sale.idtipo = TipiSale.idtipo
 where Sale.descrizione like "%vista sul mare%"
+
+-- 9. Visualizzare le sale meeting con “veranda” e “vista sul mare”
+select Sale.nome, TipiSale.nome, Sale.descrizione
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+where   (Sale.descrizione like "%veranda%" or
+        Sale.descrizione like "%vista sul mare%") and
+        TipiSale.nome = "meeting"

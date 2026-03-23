@@ -110,3 +110,9 @@ select TipiSale.nome, avg(Sale.prezzo)
 from Sale
 join TipiSale on Sale.idtipo = TipiSale.idtipo
 group by TipiSale.nome
+
+-- 22. Visualizzare quanti clienti hanno prenotato per ogni Nazione a esclusione degli Italiani
+select Nazioni.nazione, count(Clienti.idcliente)
+from Clienti
+join Nazioni on Clienti.idnazionalita = Nazioni.idnazione
+group by Nazioni.nazione

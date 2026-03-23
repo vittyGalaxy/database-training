@@ -104,3 +104,9 @@ select TipiEventi.tipo, count(PrEventi.idprevento)
 from PrEventi
 join TipiEventi on PrEventi.idtipo = TipiEventi.idtipo
 group by TipiEventi.tipo
+
+-- 21. Visualizzare il prezzo medio per tipo di sala
+select TipiSale.nome, avg(Sale.prezzo)
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+group by TipiSale.nome

@@ -86,3 +86,9 @@ join TipiSale on PrEventi.idtipo = TipiSale.idtipo
 join Clienti on PrEventi.idcliente = Clienti.idcliente
 group by TipiSale.nome
 having TipiSale.nome = "auditorium"
+
+-- 18. Visualizzare quante sale ho per ogni tipo
+select TipiSale.nome, count(Sale.idsala)
+from Sale
+join TipiSale on Sale.idtipo = TipiSale.idtipo
+group by TipiSale.nome

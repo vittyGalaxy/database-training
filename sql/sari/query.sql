@@ -98,3 +98,9 @@ select TipiSale.nome, count(PrEventi.idprevento)
 from PrEventi
 join TipiSale on PrEventi.idtipo = TipiSale.idtipo
 group by TipiSale.nome
+
+-- 20. Visualizzare quante prenotazioni sono state finora effettuate per ogni tipo di evento
+select TipiEventi.tipo, count(PrEventi.idprevento)
+from PrEventi
+join TipiEventi on PrEventi.idtipo = TipiEventi.idtipo
+group by TipiEventi.tipo

@@ -184,8 +184,7 @@ Scrivere le query che servono a:
 20. Visualizzare quante prenotazioni sono state finora effettuate per ogni tipo di evento
 21. Visualizzare il prezzo medio per tipo di sala
 22. Visualizzare quanti clienti hanno prenotato per ogni Nazione a esclusione degli Italiani
-23. Visualizzare quanti clienti hanno prenotato per ogni Nazione tranne per quelle nazioni in cui ho avuto meno
-di 100 clienti
+23. Visualizzare quanti clienti hanno prenotato per ogni Nazione tranne per quelle nazioni in cui ho avuto meno di 100 clienti
 24. Per la sala “Viola” prenotata oggi per la prima volta ho applicato un prezzo di 10 euro in promozione; visualizzare quanto ho perso rispetto al prezzo previsto.
 25. La sala “Magenta” prenotata oggi per la prima volta ho applicato un prezzo in promozione; visualizzare
 quanto ho perso rispetto al prezzo previsto.

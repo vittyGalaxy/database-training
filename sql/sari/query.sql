@@ -116,3 +116,11 @@ select Nazioni.nazione, count(Clienti.idcliente)
 from Clienti
 join Nazioni on Clienti.idnazionalita = Nazioni.idnazione
 group by Nazioni.nazione
+
+-- 23. Visualizzare quanti clienti hanno prenotato per ogni Nazione tranne per quelle nazioni in cui ho avuto meno di 100 clienti
+select Nazioni.nazione, count(distinct Clienti.idcliente) as num_clienti
+from Clienti
+join PrEventi on PrEventi.idcliente = Clienti.idcliente
+join Nazioni on Clienti.idnazionalita = Nazioni.idnazione
+group by Nazioni.nazione
+having count(distinct Clienti.idcliente) >= 100

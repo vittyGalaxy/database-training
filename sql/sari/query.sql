@@ -37,6 +37,13 @@ join Clienti on PrEventi.idcliente = Clienti.idcliente
 join TipiEventi on PrEventi.idtipo = TipiEventi.idtipo
 join Sale on PrEventi.idsala = Sale.idsala
 
+-- 7. Visualizzare tutte le prenotazioni di un dato cliente
+SELECT Clienti.nome, Clienti.cognome, PrEventi.dataarrivo, PrEventi.oraprevista, PrEventi.numpartecipanti, PrEventi.prezzofinale, TipiEventi.tipo AS tipo_evento, Sale.nome AS sala
+FROM Clienti
+JOIN PrEventi ON Clienti.idcliente = PrEventi.idcliente
+JOIN TipiEventi ON PrEventi.idtipo = TipiEventi.idtipo
+JOIN Sale ON PrEventi.idsala = Sale.idsala
+
 -- 8. Visualizzare le sale con “vista sul mare”
 select Sale.idsala, Sale.nome, Sale.descrizione, TipiSale.nome
 from Sale

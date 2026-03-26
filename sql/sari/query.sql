@@ -94,6 +94,11 @@ join Clienti on PrEventi.idcliente = Clienti.idcliente
 group by TipiSale.nome
 having TipiSale.nome = "auditorium"
 
+-- 16. Visualizzare quanto guadagnerei al giorno se tutte le sale fossero occupate facendo pagare a prezzo pieno (quello previsto)
+SELECT Sale.nome, TipiSale.nome AS tipo_sala, Sale.nposti, Sale.prezzo
+FROM Sale
+JOIN TipiSale ON Sale.idtipo = TipiSale.idtipo;
+
 -- 18. Visualizzare quante sale ho per ogni tipo
 select TipiSale.nome, count(Sale.idsala)
 from Sale

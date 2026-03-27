@@ -99,6 +99,12 @@ SELECT Sale.nome, TipiSale.nome AS tipo_sala, Sale.nposti, Sale.prezzo
 FROM Sale
 JOIN TipiSale ON Sale.idtipo = TipiSale.idtipo;
 
+-- 17. Visualizzare quanto guadagno oggi visto che tutte le sale sono realmente occupate
+select sum(Sale.prezzo) as guadagno_oggi
+from PrEventi
+join Sale on PrEventi.idsala = Sale.idsala
+WHERE date(PrEventi.dataarrivo) = current_date;
+
 -- 18. Visualizzare quante sale ho per ogni tipo
 select TipiSale.nome, count(Sale.idsala)
 from Sale

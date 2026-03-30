@@ -141,3 +141,9 @@ join PrEventi on PrEventi.idcliente = Clienti.idcliente
 join Nazioni on Clienti.idnazionalita = Nazioni.idnazione
 group by Nazioni.nazione
 having count(distinct Clienti.idcliente) >= 100
+
+-- 24. Per la sala “Viola” prenotata oggi per la prima volta ho applicato un prezzo di 10 euro in promozione; visualizzare quanto ho perso rispetto al prezzo previsto.
+select sum(Sale.prezzo - PrEventi.prezzofinale) as perdita_totale
+from PrEventi
+join Sale on PrEventi.idsala = Sale.idsala
+where Sale.nome = 'Viola'

@@ -147,3 +147,10 @@ select sum(Sale.prezzo - PrEventi.prezzofinale) as perdita_totale
 from PrEventi
 join Sale on PrEventi.idsala = Sale.idsala
 where Sale.nome = 'Viola'
+
+-- 25. La sala “Magenta” prenotata oggi per la prima volta ho applicato un prezzo in promozione; visualizzare
+select Clienti.idcliente, Clienti.nome, Clienti.cognome, Clienti.telefono, Clienti.email, Sale.nome as sala, PrEventi.dataarrivo, PrEventi.oraprevista, PrEventi.numpartecipanti, PrEventi.prezzofinale
+from Clienti
+join PrEventi on Clienti.idcliente = PrEventi.idcliente
+JOIN Sale on PrEventi.idsala = Sale.idsala
+WHERE Sale.nome = 'Magenta'

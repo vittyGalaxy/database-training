@@ -154,3 +154,9 @@ from Clienti
 join PrEventi on Clienti.idcliente = PrEventi.idcliente
 JOIN Sale on PrEventi.idsala = Sale.idsala
 WHERE Sale.nome = 'Magenta'
+
+-- 26. Di regolamento, ai clienti che non indicano un ora di arrivo applico una penale di 10 euro sul prezzo finale concordato; visualizzare quante penali ho applicato finora e quanto ho guadagnato in più
+select count(PrEventi.idprevento) AS numero_penali, count(PrEventi.idprevento) * 10 as guadagno_extra
+from PrEventi
+join TipiEventi on PrEventi.idtipo = TipiEventi.idtipo
+where PrEventi.oraprevista is null;
